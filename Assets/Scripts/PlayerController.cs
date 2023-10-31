@@ -12,11 +12,11 @@ public class PlayerController : MonoBehaviour
     public AudioSource fireSFX;
     public AudioSource thrustSFX;
 
-    public float thrustSpeed = 1f;
+    public float thrustSpeed = 2f;
     public bool thrusting { get; private set; }
 
     public float turnDirection { get; private set; } = 0f;
-    public float rotationSpeed = 0.1f;
+    public float rotationSpeed = 0.025f;
 
     public float respawnDelay = 3f;
     public float respawnInvulnerability = 3f;

@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 2690117250785292057}
   - component: {fileID: 2965701681898423062}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: FireSFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 6483939651748428019}
   - component: {fileID: 8649213739633212670}
   m_Layer: 0
-  m_Name: Audio Source (1)
+  m_Name: thrustSFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

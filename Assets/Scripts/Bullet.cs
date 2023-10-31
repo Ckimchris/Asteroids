@@ -8,7 +8,6 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D myRigidBody { get; private set; }
     public float lifeTime = 1f;
     public float speed = 500f;
-    public float fireSpreadAngle = 5f;
 
     // Start is called before the first frame update
     void Awake()

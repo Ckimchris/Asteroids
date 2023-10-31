@@ -16,7 +16,7 @@ public class UFO : MonoBehaviour
     public AudioSource fireSFX;
     public float fireSpreadAngle = 1f;
 
-    public float ufoSpeed = 0.2f;
+    public float ufoSpeed = 0.4f;
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -51,7 +51,7 @@ public class UFO : MonoBehaviour
     {
         while(true)
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(3f);
             Bullet bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
             bullet.Shoot(((Random.Range(-fireSpreadAngle, fireSpreadAngle) * ship.transform.position) - transform.position));
             fireSFX.Play();
@@ -65,7 +65,7 @@ public class UFO : MonoBehaviour
         while(true)
         {
             var direction = Vector3.zero;
-            if (Vector3.Distance(transform.position, ship.transform.position) > 3f)
+            if (Vector3.Distance(transform.position, ship.transform.position) > 5f)
             {
                 direction = ship.transform.position - transform.position;
 #if UNITY_EDITOR
