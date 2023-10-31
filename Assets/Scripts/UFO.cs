@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -13,7 +14,9 @@ public class UFO : MonoBehaviour
     public Rigidbody2D myRigidBody { get; private set; }
     public SpriteRenderer spriteRenderer { get; private set; }
     public AudioSource fireSFX;
-    public float fireSpreadAngle = 5f;
+    public float fireSpreadAngle = 1f;
+
+    public float ufoSpeed = 0.2f;
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -65,7 +68,11 @@ public class UFO : MonoBehaviour
             if (Vector3.Distance(transform.position, ship.transform.position) > 3f)
             {
                 direction = ship.transform.position - transform.position;
+#if UNITY_EDITOR
                 myRigidBody.AddRelativeForce(direction.normalized * 0.1f, ForceMode2D.Force);
+#else
+                myRigidBody.AddRelativeForce(direction.normalized * ufoSpeed, ForceMode2D.Force);
+#endif
             }
             else
             {

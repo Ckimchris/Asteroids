@@ -58,6 +58,11 @@ public class Game : MonoBehaviour
                 NewGame();
             }
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Quit();
+        }
     }
 
     private void PreGame()
