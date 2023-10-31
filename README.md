@@ -1,6 +1,6 @@
 # Asteroids
 
-##Controls
+## Controls
 
 Up Arrow - Accelerate
 
